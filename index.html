@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A playful Pop Art, Libras and English memory game for a school cultural fair.">
+    <title>Jogo da Memória</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main class="game-shell">
+        <header class="topbar">
+            <a class="brand" href="./index.html" aria-label="Início do jogo da memória">
+                <span class="brand-mark" aria-hidden="true">PA</span>
+                <span class="brand-copy">
+                    <span class="brand-kicker" id="brand-kicker">Feira Cultural</span>
+                    <span class="brand-name" id="brand-name">Jogo da Memória</span>
+                </span>
+            </a>
+            <div class="topbar-note"><span class="dot"></span> <span id="topbar-note">Inglês × Artes</span></div>
+        </header>
+
+        <section class="intro" aria-labelledby="game-title">
+            <div class="intro-copy">
+                <p class="eyebrow" id="game-eyebrow">Pop Art × Libras</p>
+                <h1 id="game-title">Encontre os <span>pares</span>.</h1>
+                <p class="intro-text" id="game-subtitle">Pop Art, Libras e palavras em inglês.</p>
+                <p class="game-instructions" id="game-instructions">Encontre as duas cartas que formam o mesmo par.</p>
+            </div>
+            <div class="intro-art" aria-hidden="true">
+                <span class="sunburst">WOW!</span>
+                <span class="intro-star">✦</span>
+                <span class="intro-zigzag"></span>
+            </div>
+        </section>
+
+        <section class="game-panel" aria-label="Jogo da memória">
+            <div class="game-toolbar">
+                <div class="stat"><span class="stat-label" id="pairs-label">Pares encontrados</span><strong><span id="matches">0</span><span class="stat-divider">/</span><span id="total-pairs">0</span></strong></div>
+                <div class="stat"><span class="stat-label" id="attempts-label">Tentativas</span><strong id="moves">0</strong></div>
+                <button class="restart-button" id="restart-button" type="button"><span aria-hidden="true">↻</span> <span id="restart-label">Reiniciar jogo</span></button>
+            </div>
+            <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+
+            <div class="board" id="board" aria-live="polite"></div>
+            <p class="status-message" id="status-message">Escolha uma carta para começar.</p>
+        </section>
+
+        <footer class="footer-note">
+            <span id="footer-lead">Observe com atenção.</span> <span id="footer-text">Cada palavra tem um sinal.</span>
+            <small id="credit">© Victor Corrisa</small>
+        </footer>
+    </main>
+
+    <div class="completion-modal" id="completion-modal" role="dialog" aria-modal="true" aria-labelledby="completion-title" hidden>
+        <div class="modal-spark spark-one">✦</div>
+        <div class="modal-spark spark-two">✦</div>
+        <div class="modal-content">
+            <p class="eyebrow" id="completion-eyebrow">Muito bem</p>
+            <h2 id="completion-title">Congratulations!</h2>
+            <p id="completion-copy">Parabéns! Você encontrou todos os pares.</p>
+            <button class="restart-button modal-button" id="play-again-button" type="button"><span id="play-again-label">Jogar novamente</span> <span aria-hidden="true">↗</span></button>
+        </div>
+    </div>
+
+    <script src="./config.js"></script>
+    <script src="./js/game.js"></script>
+</body>
+</html>
