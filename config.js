@@ -38,7 +38,7 @@ window.GAME_CONFIG = {
         playAgain: "Jogar novamente",
         footerLead: "Observe com atenção.",
         footerText: "Cada palavra tem um sinal.",
-        credit: "© Victor Corrisa"
+        credit: "© Victor CorriçSa"
     },
     pairs: [
         { id: 1, name: "Coffee", word: "COFFEE", sign: "CAFÉ", cards: ["./assets/cards/par1_1.png", "./assets/cards/par1_2.png"], color: "#f0443e", accent: "#ffd44d", symbol: "☕" },
